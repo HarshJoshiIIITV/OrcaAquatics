@@ -76,7 +76,7 @@ export const Footer= (props) => {
                         </Typography>
                         <br/>
                         <Typography variant='body2'>
-                        Hamilton Aquatics is home of a comprehensive aquatics programme in swimming, competitive swimming, artistic swimming and water polo. With over 30 locations in the UAE and Qatar, & UK qualified teachers and coaches to choose from, access to quality aquatics provision has never been easier.
+                        Orca Aquatics is home of a comprehensive aquatics programme in swimming, competitive swimming, artistic swimming and water polo. With over 30 locations in the UAE and Qatar, & UK qualified teachers and coaches to choose from, access to quality aquatics provision has never been easier.
                         </Typography>
                     </Grid>
                     <Grid item md={3} style={{padding:'14px'}}>
@@ -85,8 +85,8 @@ export const Footer= (props) => {
                         </Typography>
                         <br/>
                         <Typography variant='body2'>
-                        At Hamilton Aquatics, we recruit and retain a high performing and diverse workforce and foster a healthy, safe and productive work environment. The mission of the HR Department is to develop and sustain a dynamic work environment while providing support and growth opportunities.
-Click Here to view opportunities at Hamilton Aquatics.
+                        At Orca Aquatics, we recruit and retain a high performing and diverse workforce and foster a healthy, safe and productive work environment. The mission of the HR Department is to develop and sustain a dynamic work environment while providing support and growth opportunities.
+Click Here to view opportunities at Orca Aquatics.
                          </Typography>
                     </Grid>
                     <Grid item md={3} style={{padding:'14px'}}>
@@ -95,8 +95,8 @@ Click Here to view opportunities at Hamilton Aquatics.
                         </Typography>
                         <br/>
                         <Typography variant='body2'>
-                        At Hamilton Aquatics, we recruit and retain a high performing and diverse workforce and foster a healthy, safe and productive work environment. The mission of the HR Department is to develop and sustain a dynamic work environment while providing support and growth opportunities.
-Click Here to view opportunities at Hamilton Aquatics.
+                        At Orca Aquatics, we recruit and retain a high performing and diverse workforce and foster a healthy, safe and productive work environment. The mission of the HR Department is to develop and sustain a dynamic work environment while providing support and growth opportunities.
+Click Here to view opportunities at Orca Aquatics.
                          </Typography>
                         
                     </Grid>
@@ -115,7 +115,7 @@ Click Here to view opportunities at Hamilton Aquatics.
                          </Typography>
                          <Typography variant='body2'>
                             <MailOutlineIcon style={{ color: "#F47912",position:'relative',top:'5px',marginRight:'10px' }}/>
-                            enquiry@hamiltonaquatics.ae
+                            enquiry@orcaaquatics.in
                          </Typography>
                          <br/>
                          <div style={{display:'flex',justifyContent:'left'}}>
