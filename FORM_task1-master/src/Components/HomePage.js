@@ -1,26 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import Select from '@material-ui/core/Select';
 import TextField from '@material-ui/core/TextField';
-import FormControl from '@material-ui/core/FormControl';
 import Button from '@material-ui/core/Button';
-import {Grid, Typography } from '@material-ui/core'
-import logo from '../images/logo.png'
+import {Grid, Typography,Paper } from '@material-ui/core'
 import home1 from '../images/home1.jpg'
 import home2 from '../images/home2.jpg'
 import home3 from '../images/home3.jpg'
 import home4 from '../images/home4.jpg'
 import Carousel from 'react-material-ui-carousel'
-import { Paper} from '@mui/material'
-import PhoneIcon from '@material-ui/icons/Phone';
-import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import coropic from '../images/coropic.jpg'
 import testimonials from '../images/testimonials.jpg';
-import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
-import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
+import FormatQuoteIcon from '@material-ui/icons/FormatQuote';
+import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
 import partner1 from '../images/partner1.png'
 
 const useStyles = makeStyles((theme) => ({

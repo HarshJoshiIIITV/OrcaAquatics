@@ -1,33 +1,14 @@
-import React, { useState } from 'react'
+import React  from 'react'
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import Select from '@material-ui/core/Select';
-import TextField from '@material-ui/core/TextField';
-import FormControl from '@material-ui/core/FormControl';
-import Button from '@material-ui/core/Button';
-import {Grid, Typography } from '@material-ui/core'
-import logo from '../images/logo.png'
-import home1 from '../images/home1.jpg'
-import home2 from '../images/home2.jpg'
-import home3 from '../images/home3.jpg'
-import home4 from '../images/home4.jpg'
-import Carousel from 'react-material-ui-carousel'
-import { Paper} from '@mui/material'
+import {Grid, Typography} from '@material-ui/core'
 import PhoneIcon from '@material-ui/icons/Phone';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
-import coropic from '../images/coropic.jpg'
-import testimonials from '../images/testimonials.jpg';
-import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
-import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
-import partner1 from '../images/partner1.png'
-import TelegramIcon from '@mui/icons-material/Telegram';
-import EmailIcon from '@mui/icons-material/Email';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import YouTubeIcon from '@mui/icons-material/YouTube';
+import TelegramIcon from '@material-ui/icons/Telegram';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import YouTubeIcon from '@material-ui/icons/YouTube';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -119,8 +100,8 @@ Click Here to view opportunities at Orca Aquatics.
                          </Typography>
                          <br/>
                          <div style={{display:'flex',justifyContent:'left'}}>
-                            <InstagramIcon style={{color: "#F47912",marginRight:'15x'}} />
-                            <FacebookIcon style={{color: "#F47912",marginRight:'15px'}}/>
+                            <InstagramIcon style={{color: "#F47912"}} />
+                            <FacebookIcon style={{color: "#F47912",marginRight:'15px',marginLeft:'15px'}}/>
                             <YouTubeIcon style={{color: "#F47912",marginRight:'15px'}}/>
                             <TwitterIcon style={{color: "#F47912"}}/>
                          </div>
