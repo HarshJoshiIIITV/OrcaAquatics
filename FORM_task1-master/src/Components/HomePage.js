@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
@@ -14,6 +14,8 @@ import testimonials from '../images/testimonials.jpg';
 import FormatQuoteIcon from '@material-ui/icons/FormatQuote';
 import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
 import partner1 from '../images/partner1.png'
+import youtubebg from '../images/youtubebg.jpg'
+import CountUp from 'react-countup';
 
 const useStyles = makeStyles((theme) => ({
     topheader:{
@@ -161,6 +163,22 @@ const useStyles = makeStyles((theme) => ({
 
 export const HomePage= (props) => {
     const classes = useStyles();
+    const [counting,setCounting]=useState(false);
+    useEffect(() => {
+        // Button is displayed after scrolling for 500 pixels
+        const toggleVisibility = () => {
+          if (window.pageYOffset > 2000) {
+            setCounting(true);
+          } else {
+            setCounting(false);
+          }
+        };
+    
+        window.addEventListener("scroll", toggleVisibility);
+    
+        return () => window.removeEventListener("scroll", toggleVisibility);
+      }, []);
+    
     return(
         <div className={classes.parentHeader}>
             <div >
@@ -220,7 +238,9 @@ export const HomePage= (props) => {
                 </Container>
             </div>
             </div>
-            <div className={classes.aboutOA}>
+            <div style={{height:'50px'}} ref={props.firstItemRef}></div>
+            <div className={classes.aboutOA}    >
+                
                 <Container>
                     <Grid container>
                         <Grid item md={7}>
@@ -228,14 +248,14 @@ export const HomePage= (props) => {
                             <Typography  variant='h4'>ABOUT ORCA AQUATICS</Typography>
                             <br/>
                             <Typography variant='body2'>
-                            Orca Aquatics is home of a comprehensive aquatics programme in swimming, competitive swimming, artistic swimming and water polo. With over 30 locations in the UAE,
-                               and UK qualified teachers and coaches to choose from, access to quality aquatics provision has never been easier.
+                            Orca Aquatics is home of a comprehensive aquatics programme in swimming, competitive swimming, learn to swim and water polo. With over 4+ locations in the Jaipur,
+                               and USA qualified teachers and coaches to choose from, access to quality aquatics provision has never been easier.
                             </Typography>
                             <br/>
                             <Grid container>
                                 <Grid item md={6}>
-                                <Typography variant='h6' style={{fontWeight:600}}>OVER 30+ LOCATIONS</Typography>
-                                <Typography variant='body2'> Be it Dubai or Abu Dhabi, one of our swimming locations is never too far. </Typography>
+                                <Typography variant='h6' style={{fontWeight:600}}>OVER 5+ LOCATIONS</Typography>
+                                <Typography variant='body2'> Be it Jaipur, one of our swimming locations is never too far. </Typography>
                             
                                 </Grid>
                                 <Grid item md={6}>
@@ -247,7 +267,7 @@ export const HomePage= (props) => {
                             <br/>
                             <Grid container>
                                 <Grid item md={6}>
-                                <Typography variant='h6' style={{fontWeight:600}}>UK QUALIFIED TEACHERS</Typography>
+                                <Typography variant='h6' style={{fontWeight:600}}>USA QUALIFIED TEACHERS</Typography>
                                 <Typography variant='body2'> Highly qualified swimming and coaching staff who undergo monthly training ensuring the best delivery of our programmes.</Typography>
                             
                                 </Grid>
@@ -259,17 +279,23 @@ export const HomePage= (props) => {
                             </Grid>
 
                         </Grid>
-                        <Grid item md={5}>
+                        <Grid item md={5} >
                             <div className={classes.formHome} style={{background: '#FFFFFF',padding: '30px 20px',border: '1px solid #f2f2f2',boxShadow: '0px 0px 25px 10px rgb(0 0 0 / 5%)'}}>
-                            <Typography variant='h6' style={{fontWeight:600,textAlign:'center'}}>HAVE A QUESTION? <br/> REQUEST A CALLBACK FROM OUR<br/> SUPPORT STAFF</Typography>
+                            <Typography 
+                            variant='h6' style={{fontWeight:600,textAlign:'center'}}>HAVE A QUESTION? <br/> REQUEST A CALLBACK FROM OUR<br/> SUPPORT STAFF</Typography>
+                            <br/>
+                            <TextField 
+                             fullWidth id="name" label="Name" variant="outlined" style={{marginBottom:'16px'}}/>
+                             
                             
-                            <TextField fullWidth id="name" label="Name" variant="filled" />
+                            <TextField  fullWidth id="email" label="Email" variant="outlined" style={{marginBottom:'16px'}}/>
                             
-                            <TextField fullWidth id="email" label="Email" variant="filled" />
+                            <TextField  fullWidth id="phone" label="Phone" variant="outlined" style={{marginBottom:'16px'}}/>
                             
-                            <TextField fullWidth id="phone" label="Phone" variant="filled" />
-                            
-                            <TextField fullWidth id="message" label="Phone" variant="filled" />
+                            <TextField  fullWidth id="message" label="Your message" variant="outlined" 
+                               multiline
+                               rows={3}
+                            />
                             
                             <Button fullWidth>SEND MESSAGE</Button>
                             </div>
@@ -355,20 +381,32 @@ export const HomePage= (props) => {
                 <Container>
                     <Grid container>
                         <Grid item md={3}>
-                            <Typography variant='h4'>12+</Typography>
-                            <Typography variant='h6'>YEARS EXPERIANCE <br/> IN THE INDIA</Typography>
+                            <Typography variant='h4'>{counting && <CountUp
+
+  end={12}
+  duration={1.5}/>} + </Typography>
+                            <Typography variant='h6'>YEARS EXPERIANCE <br/> IN THE RAJASTHAN</Typography>
                         </Grid>
                         <Grid item md={3}>
-                        <Typography variant='h4'>500+</Typography>
+                        <Typography variant='h4'>{counting && <CountUp
+
+end={100}
+duration={1.5}/>} + </Typography>
                             <Typography variant='h6'>ACTIVE SWIMMING <br/> COMMUNITY</Typography>
                         </Grid>
                         <Grid item md={3}>
-                        <Typography variant='h4'>20</Typography>
-                            <Typography variant='h6'>EXPERT SWIMMING <br/> TRAINERS</Typography>
+                        <Typography variant='h4'>{counting && <CountUp
+
+end={250}
+duration={1.5}/>}</Typography>
+                            <Typography variant='h6'>NATIONAL SWIMMERS <br/> CREATED</Typography>
                         </Grid>
                         <Grid item md={3}>
-                        <Typography variant='h4'>3</Typography>
-                            <Typography variant='h6'>OLYMPIC SWIMMERS <br/> CREATED</Typography>
+                        <Typography variant='h4'>{counting && <CountUp
+
+end={8}
+duration={1.5}/>}</Typography>
+                            <Typography variant='h6'>NATIONAL MEDALLIST <br/> SWIMMERS CREATED</Typography>
                         </Grid>
 
                     </Grid>
@@ -379,7 +417,7 @@ export const HomePage= (props) => {
             <br/>
             <div className={classes.testimonials}>
                 <Container>
-                    <Typography variant='h4' align="center" style={{color:'black'}}> MEMBER TESTIMONIALS</Typography>
+                    <Typography variant='h4' align="center" style={{color:'black'}}> SWIMMERS TESTIMONIALS</Typography>
                     <br/>
                     <Grid container>
                         <Grid item md={6}>
@@ -388,13 +426,13 @@ export const HomePage= (props) => {
                         </Grid>
                         <Grid item md={6}>
                         <FormatQuoteIcon style={{display:'block',fontSize:'7rem'}}/>
-                            <Carousel>
+                            <Carousel  autoPlay={false} navButtonsAlwaysInvisible={true}  >
                             <div > 
-                                <Typography variant='body2' style={{fontSize:'20px',fontWeight:400,color:'#646464',fontFamily:'Libre Baskerville'}}>Just wanted to say a big thank you for your amazing work with Omar. Since he has started with you in Level 2 (and now up to level 3) his swimming has improved tremendously.
-                                He is always excited to come to your class and uses the swimming vocabulary in his conversations whenever we are swimming (soldiers, disappear, rocket, dolphin kicks).
-                                More importantly, it is very obvious how keen you are on Omar reaching his full potential and making the best out of the classes that he attends.
-                                We are very appreciative of this - we know Omar is in good hands.</Typography>
-                                <Typography style={{fontSize:'20px',marginTop:'30px',color:'#646464',fontFamily:'Libre Baskerville'}} variant='body2'>RAKESH KUMAR</Typography>
+                                <Typography variant='body2' style={{fontSize:'20px',fontWeight:400,color:'#646464',fontFamily:'Libre Baskerville'}}>Just wanted to say a big thank you for your amazing work. Since I have started with you in 2018 and my swimming is improved tremendously.
+                                I am very thnakful to coaches as this program helped me to reach early 24sec in 50m freestyle.
+                                More importantly, it is very obvious how keen you are to make me reach my full potential and making the best out of the sessions.
+                                I am very appreciative of this.</Typography>
+                                <Typography style={{fontSize:'20px',marginTop:'30px',color:'#646464',fontFamily:'Libre Baskerville'}} variant='body2'>HARSHIT NIRWAN</Typography>
                                  
                                
                             </div>

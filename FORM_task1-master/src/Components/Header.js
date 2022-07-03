@@ -50,6 +50,10 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     parentHeader:{
+        position: 'sticky',
+        top: '0',
+        zIndex:100,
+        backgroundColor:'white',
         '& .MuiTypography-h4':{
             fontWeight:600,
             fontFamily: 'Libre Baskerville',
@@ -158,28 +162,28 @@ export const Header= (props) => {
             <div className={classes.topheader}>
                 <Container>
                     <Grid container>
-                        <Grid item md={5}>
+                        <Grid item xl={7} lg={6} md={5} sm={12}>
                             <MailOutlineIcon style={{width:'24px',color: "#F47912",height:'18px',position:'relative',top:'4px'}}/>
                             <span>orcaswim22@gmail.com</span>
                             <PhoneIcon style={{color: "#F47912",width:'22px',height:'16px',marginLeft:'10px',position:'relative',top:'2px'}}/>
                             <span style={{marginLeft:'-4px'}}>  +919560956633</span>    
                         </Grid>
-                        <Grid item md={7} style={{display:'flex',justifyContent:'space-around'}}> 
-                            <Button>NewsLetter</Button>
+                        <Grid item xl={5} lg={6} md={7} sm={12} style={{display:'flex',justifyContent:'space-around'}}> 
+                            {/* <Button>NewsLetter</Button> */}
           ,                  <Button>Gallery</Button>
                             <Button>Live results</Button>
-                            <Button style={{ background:'#F47912'}}>Member login</Button>
+                            <Button style={{ background:'#F47912'}} onClick={() => props.firstItemRef.current.scrollIntoView({block: 'start',  behavior: 'smooth'})}>Contact us</Button>
                         </Grid>
                     </Grid>
                 </Container>
             </div>
             <div className={classes.navbar}>
-                <Container style={{display:'flex',justifyContent:'space-around'}}>
+                <Container style={{display:'flex',justifyContent:'space-around', flexWrap:'wrap'}}>
                     <img src={logo} width="44px" height="44px" style={{paddingTop:'10px'}}/>
                     <Button>Learn to swim</Button>
                             <Button>Squads</Button>
-                            <Button>SynQuatics</Button>
-                            <Button>Hamiliton Sharks</Button>
+                            {/* <Button>SynQuatics</Button> */}
+                            {/* <Button>Hamiliton Sharks</Button> */}
                             <Button>Competitions</Button>
                             <Button>Locations</Button>
                             <Button>Blog</Button>

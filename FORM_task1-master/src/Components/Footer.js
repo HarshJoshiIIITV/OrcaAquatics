@@ -22,7 +22,8 @@ const useStyles = makeStyles((theme) => ({
         '& p':{
             fontFamily: 'Libre Baskerville',
             color:'#555555',
-            color:'white'
+            color:'white',
+            wordSpacing: '4px'
         },
         '& .MuiTypography-h4':{
             fontWeight:600,
@@ -57,7 +58,7 @@ export const Footer= (props) => {
                         </Typography>
                         <br/>
                         <Typography variant='body2'>
-                        Orca Aquatics is home of a comprehensive aquatics programme in swimming, competitive swimming, artistic swimming and water polo. With over 30 locations in the UAE and Qatar, & UK qualified teachers and coaches to choose from, access to quality aquatics provision has never been easier.
+                        Orca Aquatics is home of a comprehensive aquatics programme in swimming, competitive swimming, learn to swim and water polo. With over 4+ locations in the Jaipur, and USA qualified teachers and coaches to choose from, access to quality aquatics provision has never been easier.
                         </Typography>
                     </Grid>
                     <Grid item md={3} style={{padding:'14px'}}>
@@ -88,11 +89,11 @@ Click Here to view opportunities at Orca Aquatics.
                         <br/>
                         <Typography variant='body2'>
                             <TelegramIcon style={{ color: "#F47912",position:'relative',top:'5px',marginRight:'10px' }}/>
-                        Office 1012, 10th floor, Detroit House Building Motor City, Dubai, U.A.E.
+                        A-235, Kardhni Scheme, Govindpura, Jaipur, Rajasthan, 302012
                          </Typography>
                          <Typography variant='body2'>
                             <PhoneIcon style={{ color: "#F47912",position:'relative',top:'5px',marginRight:'10px' }}/>
-                            Office:  (+971) 4 450 8832
+                            Office:  (+91) 9560956633
                          </Typography>
                          <Typography variant='body2'>
                             <MailOutlineIcon style={{ color: "#F47912",position:'relative',top:'5px',marginRight:'10px' }}/>
