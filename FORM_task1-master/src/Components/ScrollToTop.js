@@ -3,7 +3,7 @@ import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
   mobileView:{
-    "@media (min-width: 400px)": {
+    "@media (min-width: 50px)": {
         display: "block"
       },
       "@media (min-width: 1000px)": {
@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   lappiView:{
-      "@media (min-width: 400px)": {
+      "@media (min-width: 50px)": {
         display: "none"
       },
       "@media (min-width: 1000px)": {

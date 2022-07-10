@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     parentHeader:{
-        "@media (min-width: 400px)": {
+        "@media (min-width: 50px)": {
             display: "none"
           },
           "@media (min-width: 1000px)": {
@@ -83,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     mobileHeader:{
-        "@media (min-width: 400px)": {
+        "@media (min-width: 50px)": {
             display: "block"
           },
           "@media (min-width: 1000px)": {

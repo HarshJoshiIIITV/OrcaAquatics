@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     parentHeader:{
-        "@media (min-width: 400px)": {
+        "@media (min-width: 50px)": {
             display: "none"
           },
           "@media (min-width: 1000px)": {
