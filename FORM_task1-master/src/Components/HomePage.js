@@ -16,6 +16,8 @@ import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
 import partner1 from '../images/partner1.png'
 import youtubebg from '../images/youtubebg.jpg'
 import CountUp from 'react-countup';
+import behindNumbers from '../images/behind_number.jpg';
+import videoThumbnail from '../images/video-thumbnail.jpg'
 
 const useStyles = makeStyles((theme) => ({
     topheader:{
@@ -60,6 +62,33 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     parentHeader:{
+        "@media (min-width: 400px)": {
+            display: "none"
+          },
+          "@media (min-width: 1000px)": {
+            display: "block"
+          },
+        '& .MuiTypography-h4':{
+            fontWeight:600,
+            fontFamily: 'Libre Baskerville',
+            color:'white'
+        },
+        '& .MuiTypography-h6':{
+            fontWeight:600,
+            fontFamily: 'Libre Baskerville',
+            color:'white'
+        },
+        '& Button':{
+            fontFamily: 'Libre Baskerville',
+        }
+    },
+    mobileHeader:{
+        "@media (min-width: 400px)": {
+            display: "block"
+          },
+          "@media (min-width: 1000px)": {
+            display: "none"
+          },
         '& .MuiTypography-h4':{
             fontWeight:600,
             fontFamily: 'Libre Baskerville',
@@ -138,7 +167,7 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     countings:{
-        background: 'linear-gradient( rgba(244,121,18,0.8), rgba(244,121,18,0.8) ), url(https://www.hamiltonaquatics.ae/assets/images/behind_number.jpg)',
+        background: `linear-gradient( rgba(244,121,18,0.8), rgba(244,121,18,0.8) ), url(${behindNumbers})`,
         backgroundPosition: 'center center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
@@ -152,7 +181,7 @@ const useStyles = makeStyles((theme) => ({
     },
     videos:{
         padding:'6rem 0rem',
-        background: 'linear-gradient(rgba(17, 17, 17, 0), rgba(17, 17, 17, 0)) 0% -58.0875px / cover no-repeat fixed, url(https://www.hamiltonaquatics.ae/assets/images/video-thumbnail.jpg) 0%'
+        background: `linear-gradient(rgba(17, 17, 17, 0), rgba(17, 17, 17, 0)) 0% -58.0875px / cover no-repeat fixed, url(${videoThumbnail}) 0%`
     },
     op:{
         padding:'6rem 0rem'
@@ -180,6 +209,7 @@ export const HomePage= (props) => {
       }, []);
     
     return(
+        <>
         <div className={classes.parentHeader}>
             <div >
             <Carousel  className={classes.courousal} animation="slide" indicators={false} interval={4000}  navButtonsAlwaysVisible={true} autoPlay={true}>
@@ -515,7 +545,299 @@ duration={1.5}/>}</Typography>
             <br/>
 
     </div>
-    
+
+    {/* MOBILE WORK */}
+
+    <div className={classes.mobileHeader}>
+            <div >
+            <Carousel  className={classes.courousal} animation="slide" indicators={false} interval={4000}  navButtonsAlwaysVisible={true} autoPlay={true}>
+                
+                        <Paper style={{ height: '350px' }} > 
+                            <div style={{position:'relative'}}>
+                                <img src={home1} />
+                                <div style={{position:'absolute', top:'5%', left:'8%'}}>
+                                <Typography variant='h4'>IT'S NEVER TOO EARLY TO <br/>LEARN TO SWIM!</Typography>
+                                <br/>
+                                <br/>
+                                <Button className={classes.orange_buttons}>LEARN MORE</Button>
+                                </div>
+                            </div>
+                        </Paper>
+                        <Paper style={{ height: '350px' }}   >
+                        <div style={{position:'relative'}}>
+                                <img src={home2} />
+                                <div style={{position:'absolute', top:'5%', left:'8%'}}>
+                                <Typography variant='h4'>IT'S NEVER TOO EARLY TO <br/>LEARN TO SWIM!</Typography>
+                                <br/>
+                                <br/>
+                                <Button className={classes.orange_buttons}>LEARN MORE</Button>
+                                </div>
+                            </div>
+                         </Paper>
+                        <Paper  style={{ height: '350px' }} >
+                        <div style={{position:'relative'}}>
+                                <img src={home3} />
+                                <div style={{position:'absolute', top:'5%', left:'8%'}}>
+                                <Typography variant='h4'>IT'S NEVER TOO EARLY TO <br/>LEARN TO SWIM!</Typography>
+                                <br/>
+                                <br/>
+                                <Button className={classes.orange_buttons}>LEARN MORE</Button>
+                                </div>
+                            </div>
+                        </Paper>
+                        <Paper style={{ height: '350px' }} >
+                        <div style={{position:'relative'}}>
+                                <img src={home4} />
+                                <div style={{position:'absolute', top:'5%', left:'8%'}}>
+                                <Typography variant='h4'>IT'S NEVER TOO EARLY TO <br/>LEARN TO SWIM!</Typography>
+                                <br/>
+                                <br/>
+                                <Button className={classes.orange_buttons}>LEARN MORE</Button>
+                                </div>
+                            </div>
+                        </Paper>
+                        
+                
+            </Carousel>
+            <div style={{backgroundColor:'#F47912',padding:'50px 0px'}}>
+                <Container>
+                    <Grid container>
+                        <Grid item md={9}>
+                            <Typography variant='h4'>REGISTER NOW!</Typography>
+                            <br/>
+                            <Typography variant='h6'>Become water safe and kick start your journey with OrcaAquatics today!</Typography>
+                        </Grid>
+                        
+                        <Grid item md={3}>
+                            <Button style={{marginTop:'18px', backgroundColor:'black',color:'white', padding:'25px 10px',borderRadius:'10px'}} fullWidth>START FREE ASSESSMENT</Button>
+                        </Grid>
+                    </Grid>
+                </Container>
+            </div>
+            </div>
+            <div style={{height:'5px'}} ref={props.firstItemRef}></div>
+            <div className={classes.aboutOA}    >
+                
+                <Container>
+                    <Grid container>
+                        <Grid item md={7}>
+                            <br/>
+                            <Typography  variant='h4'>ABOUT ORCA AQUATICS</Typography>
+                            <br/>
+                            <Typography variant='body2'>
+                            Orca Aquatics is home of a comprehensive aquatics programme in swimming, competitive swimming, learn to swim and water polo. With over 4+ locations in the Jaipur,
+                               and USA qualified teachers and coaches to choose from, access to quality aquatics provision has never been easier.
+                            </Typography>
+                            <br/>
+                            <Grid container>
+                                <Grid item md={6}>
+                                <Typography variant='h6' style={{fontWeight:600}}>OVER 5+ LOCATIONS</Typography>
+                                <Typography variant='body2'> Be it Jaipur, one of our swimming locations is never too far. </Typography>
+                            
+                                </Grid>
+                                <Grid item md={6}>
+                                <Typography variant='h6' style={{fontWeight:600}}>STRUCTURED PATHWAY</Typography>
+                                <Typography variant='body2'>Our programmes follow a structured pathway that are fun and engaging whilst building water confidence.</Typography>
+                                    
+                                </Grid>
+                            </Grid>
+                            <br/>
+                            <Grid container>
+                                <Grid item md={6}>
+                                <Typography variant='h6' style={{fontWeight:600}}>USA QUALIFIED TEACHERS</Typography>
+                                <Typography variant='body2'> Highly qualified swimming and coaching staff who undergo monthly training ensuring the best delivery of our programmes.</Typography>
+                            
+                                </Grid>
+                                <Grid item md={6}>
+                                <Typography variant='h6' style={{fontWeight:600}}>ONLINE ASSESSMENT</Typography>
+                                <Typography variant='body2'>No need to visit our pool for an assessment. Get assessed online and complete your booking in a matter of minutes.</Typography>
+                                    
+                                </Grid>
+                            </Grid>
+
+                        </Grid>
+                        <br/>
+                        <br/>
+                        <Grid item md={5} >
+                            <div className={classes.formHome} style={{background: '#FFFFFF',padding: '30px 20px',border: '1px solid #f2f2f2',boxShadow: '0px 0px 25px 10px rgb(0 0 0 / 5%)'}}>
+                            <Typography 
+                            variant='h6' style={{fontWeight:600,textAlign:'center'}}>HAVE A QUESTION? <br/> REQUEST A CALLBACK FROM OUR<br/> SUPPORT STAFF</Typography>
+                            <br/>
+                            <TextField 
+                             fullWidth id="name" label="Name" variant="outlined" style={{marginBottom:'16px'}}/>
+                             
+                            
+                            <TextField  fullWidth id="email" label="Email" variant="outlined" style={{marginBottom:'16px'}}/>
+                            
+                            <TextField  fullWidth id="phone" label="Phone" variant="outlined" style={{marginBottom:'16px'}}/>
+                            
+                            <TextField  fullWidth id="message" label="Your message" variant="outlined" 
+                               multiline
+                               rows={3}
+                            />
+                            
+                            <Button fullWidth>SEND MESSAGE</Button>
+                            </div>
+
+
+                        </Grid>
+                    </Grid>
+                </Container>
+
+            </div>
+            <div className={classes.ourProg}>
+                <Container>
+                    <Typography align="center" variant='h4'>OUR PROGRAMMERS
+                    </Typography>
+                    <br/>
+                    <Typography variant='body2'>
+                    We offer fun and competitive opportunities for you to lead a healthier and safer lifestyle. Whether you are starting your journey to learn how to swim or have Olympic aspirations in any aquatic sport, we have the programme for you. We invite you to join us and experience the difference we can make in your life through the water.
+                    </Typography>
+                    <br/>
+                    <Carousel  className={classes.courousal} animation="slide" indicators={false} interval={4000}  navButtonsAlwaysVisible={true} autoPlay={true}>
+                        <div>
+                            <Grid container>
+                                <Grid item sm={12} xs={12} md={12} style={{padding:'20px'}}>
+                                    <img src={coropic} width="350px" height="300px" />
+                                </Grid>
+                            </Grid>
+
+                        </div>
+                        <div>
+                            <Grid container>
+                                <Grid item sm={12} xs={12} md={12} style={{padding:'20px'}}>
+                                    <img src={coropic} width="350px" height="300px"  />
+                                </Grid>
+                            </Grid>
+
+                        </div>
+                        <div>
+                            <Grid container>
+                                <Grid item sm={12} xs={12} md={12} style={{padding:'20px'}} >
+                                    <img src={coropic} width="350px" height="300px"  />
+                                </Grid>
+                            </Grid>
+
+                        </div>
+
+
+                    </Carousel>
+                <br/>
+                <Grid container>
+                    <Grid item xs={2} sm={2} md={2} />
+                    <Grid item xs={8} sm={8} md={8}>
+                    <Button className={classes.orange_buttons}>
+                    START ASSESSMENT
+                </Button>
+                    </Grid>
+                    <Grid item xs={2} sm={2} md={2} />
+                </Grid>
+                <br/>
+
+                
+                </Container>
+                
+            </div>
+            <div className={classes.countings}>
+                <Container>
+                    <Grid container>
+                        <Grid item md={12} sm={12} xs={12}>
+                            <Typography variant='h4'>{counting && <CountUp
+
+  end={12}
+  duration={1.5}/>} + </Typography>
+                            <Typography variant='h6'>YEARS EXPERIANCE <br/> IN THE RAJASTHAN</Typography>
+                        </Grid>
+                        
+                        <Grid style={{marginTop:'15px'}} item md={12} sm={12} xs={12}>
+                        <Typography variant='h4'>{counting && <CountUp
+
+end={100}
+duration={1.5}/>} + </Typography>
+                            <Typography variant='h6'>ACTIVE SWIMMING <br/> COMMUNITY</Typography>
+                        </Grid>
+                        <Grid style={{marginTop:'15px'}} item md={12} sm={12} xs={12}>
+                        <Typography variant='h4'>{counting && <CountUp
+
+end={250}
+duration={1.5}/>}</Typography>
+                            <Typography variant='h6'>NATIONAL SWIMMERS <br/> CREATED</Typography>
+                        </Grid>
+                        <Grid style={{marginTop:'15px'}} item md={12} sm={12} xs={12}>
+                        <Typography variant='h4'>{counting && <CountUp
+
+end={8}
+duration={1.5}/>}</Typography>
+                            <Typography variant='h6'>NATIONAL MEDALLIST <br/> SWIMMERS CREATED</Typography>
+                        </Grid>
+
+                    </Grid>
+
+                </Container>
+
+            </div>
+            <br/>
+            <div className={classes.testimonials}>
+                <Container>
+                    <Typography variant='h4' align="center" style={{color:'black'}}> SWIMMERS TESTIMONIALS</Typography>
+                    <br/>
+                    <Grid container>
+                        <Grid item xs={12} md={12} sm={12}>
+                            <img src={testimonials} style={{maxWidth:'100%', display:'block'}}/>
+
+                        </Grid>
+                        <Grid item xs={12} md={12} sm={12}>
+                        
+                            <Carousel  autoPlay={false} navButtonsAlwaysInvisible={true}  >
+                            <div > 
+                                <Typography variant='body2' style={{fontSize:'20px',fontWeight:400,color:'#646464',fontFamily:'Libre Baskerville'}}> <FormatQuoteIcon style={{fontSize:'3rem'}}/> Just wanted to say a big thank you for your amazing work. Since I have started with you in 2018 and my swimming is improved tremendously.
+                                I am very thnakful to coaches as this program helped me to reach early 24sec in 50m freestyle.
+                                More importantly, it is very obvious how keen you are to make me reach my full potential and making the best out of the sessions.</Typography>
+                                <Typography style={{fontSize:'20px',marginTop:'10px',color:'#646464',fontFamily:'Libre Baskerville'}} variant='body2'>HARSHIT NIRWAN</Typography>
+                            </div>
+                            </Carousel>
+                            
+                        </Grid>
+                    </Grid>
+                </Container>
+
+            </div>
+            <br/>
+            <br/>
+            <div className={classes.videos}>
+                <a target="_blank"  href="https://www.youtube.com/watch?v=66erBKhLnA4">
+                <PlayCircleOutlineIcon  style={{display:'block',margin:'2px auto',fontSize:'7rem',color:'white'}}/>
+                </a>
+            </div> 
+            <br/>
+            <br/>
+            <div className={classes.op} style={{padding:'1rem 0'}}>
+            <Typography variant='h4' align="center" style={{color:'black'}}> OUR PARTNERS</Typography>
+            <Container>
+                <Carousel>
+                    <Grid container>
+                        <Grid item sm={12} md={12} xs={12}>
+                            <img src={partner1} width='100%' height='200px'/>
+                        </Grid>
+                       
+                    </Grid>
+                    <Grid container>
+                        <Grid item sm={12} md={12} xs={12}>
+                            <img src={partner1} width='100%' height='200px'/>
+                        </Grid>
+                       
+                    </Grid>
+                </Carousel>
+                
+            </Container>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+
+    </div>
+   
+    </>
     )
 }
 

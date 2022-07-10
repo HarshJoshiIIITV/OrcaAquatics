@@ -1,6 +1,28 @@
 import React, { useEffect, useState } from "react";
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
+import { makeStyles } from '@material-ui/core/styles';
+const useStyles = makeStyles((theme) => ({
+  mobileView:{
+    "@media (min-width: 400px)": {
+        display: "block"
+      },
+      "@media (min-width: 1000px)": {
+        display: "none"
+      },
+    },
+  lappiView:{
+      "@media (min-width: 400px)": {
+        display: "none"
+      },
+      "@media (min-width: 1000px)": {
+        display: "block"
+      },
+    }
+}))
+
 export default function ScrollToTop() {
+  const classes = useStyles();
+  
     const [isVisible, setIsVisible] = useState(false);
   
     // Top: 0 takes us all the way back to the top of the page
@@ -36,6 +58,23 @@ export default function ScrollToTop() {
         background:'#F47912', 
       width: '40px',
       padding:'6px',
+      left: '85%',
+      bottom: '80px',
+      borderRadius:'8px',
+      height: '40px',
+      fontSize: '4rem',
+      zIndex: '1',
+      cursor: 'pointer',
+      color: 'white'}} className={classes.mobileView}>
+            <ArrowUpwardIcon onClick={scrollToTop}  style={{position:'absolute',top:'12px',left:'12px'}} />
+      </div>
+      }
+      {isVisible && 
+      <div style={{
+        position: 'fixed',
+        background:'#F47912', 
+      width: '40px',
+      padding:'6px',
       left: '95%',
       bottom: '80px',
       borderRadius:'8px',
@@ -43,10 +82,11 @@ export default function ScrollToTop() {
       fontSize: '4rem',
       zIndex: '1',
       cursor: 'pointer',
-      color: 'white'}}>
+      color: 'white'}} className={classes.lappiView}>
             <ArrowUpwardIcon onClick={scrollToTop}  style={{position:'absolute',top:'12px',left:'12px'}} />
       </div>
       }
-   </> );
+   </>
+    );
     
   }

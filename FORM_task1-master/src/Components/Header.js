@@ -6,6 +6,8 @@ import {Grid,  } from '@material-ui/core'
 import logo from '../images/logo.png'
 import PhoneIcon from '@material-ui/icons/Phone';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import behindNumber from '../images/behind_number.jpg'
+import behindThumbnail from '../images/video-thumbnail.jpg'
 
 const useStyles = makeStyles((theme) => ({
     topheader:{
@@ -28,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
             fontWeight:600
         },
         padding:'10px'
-    },
+    }, 
     orange_buttons:{
         padding:'15px 30px',
         background:'#F47912',
@@ -50,6 +52,12 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     parentHeader:{
+        "@media (min-width: 400px)": {
+            display: "none"
+          },
+          "@media (min-width: 1000px)": {
+            display: "block"
+          },
         position: 'sticky',
         top: '0',
         zIndex:100,
@@ -132,7 +140,7 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     countings:{
-        background: 'linear-gradient( rgba(244,121,18,0.8), rgba(244,121,18,0.8) ), url(https://www.hamiltonaquatics.ae/assets/images/behind_number.jpg)',
+        background: `linear-gradient( rgba(244,121,18,0.8), rgba(244,121,18,0.8) ), url(${behindNumber})`,
         backgroundPosition: 'center center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
@@ -146,7 +154,7 @@ const useStyles = makeStyles((theme) => ({
     },
     videos:{
         padding:'6rem 0rem',
-        background: 'linear-gradient(rgba(17, 17, 17, 0), rgba(17, 17, 17, 0)) 0% -58.0875px / cover no-repeat fixed, url(https://www.hamiltonaquatics.ae/assets/images/video-thumbnail.jpg) 0%'
+        background: `linear-gradient(rgba(17, 17, 17, 0), rgba(17, 17, 17, 0)) 0% -58.0875px / cover no-repeat fixed, (${behindThumbnail}) 0%`
     },
     op:{
         padding:'6rem 0rem'

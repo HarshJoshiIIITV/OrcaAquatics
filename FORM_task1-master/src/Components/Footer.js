@@ -9,11 +9,11 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import YouTubeIcon from '@material-ui/icons/YouTube';
-
+import footerImg from '../images/footer.jpg'
 
 const useStyles = makeStyles((theme) => ({
     footer:{
-        background: 'linear-gradient( rgba(17,17,17,0.8), rgba(17,17,17,0.8) ), url(https://www.hamiltonaquatics.ae/assets/images/footer.jpg)',
+        background: `linear-gradient( rgba(17,17,17,0.8), rgba(17,17,17,0.8) ), url(${footerImg})`,
         backgroundrPosition: 'center center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
