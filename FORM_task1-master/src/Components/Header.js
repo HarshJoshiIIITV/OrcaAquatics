@@ -6,8 +6,8 @@ import {Grid,  } from '@material-ui/core'
 import logo from '../images/logo.png'
 import PhoneIcon from '@material-ui/icons/Phone';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
-import behindNumber from '../images/behind_number.jpg'
-import behindThumbnail from '../images/video-thumbnail.jpg'
+import behindNumber from '../images/behind_number.png'
+import behindThumbnail from '../images/video-thumbnail.png'
 
 const useStyles = makeStyles((theme) => ({
     topheader:{

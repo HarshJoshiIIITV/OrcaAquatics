@@ -16,8 +16,8 @@ import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
 import partner1 from '../images/partner1.png'
 import youtubebg from '../images/youtubebg.jpg'
 import CountUp from 'react-countup';
-import behindNumbers from '../images/behind_number.jpg';
-import videoThumbnail from '../images/video-thumbnail.jpg'
+import behindNumbers from '../images/behind_number.png';
+import videoThumbnail from '../images/video-thumbnail.png'
 
 const useStyles = makeStyles((theme) => ({
     topheader:{
@@ -615,7 +615,7 @@ duration={1.5}/>}</Typography>
                 </Container>
             </div>
             </div>
-            <div style={{height:'5px'}} ref={props.firstItemRef}></div>
+            <div style={{height:'5px'}} ></div>
             <div className={classes.aboutOA}    >
                 
                 <Container>
