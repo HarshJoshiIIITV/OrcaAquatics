@@ -9,6 +9,7 @@ import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import behindNumber from '../images/behind_number.png'
 import behindThumbnail from '../images/video-thumbnail.png'
 import {Link} from 'react-router-dom'
+import MobileHeader from './mobile/MobileHeader'
 const useStyles = makeStyles((theme) => ({
     active:{
         color:'white',
@@ -56,12 +57,7 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     parentHeader:{
-        "@media (min-width: 50px)": {
-            display: "none"
-          },
-          "@media (min-width: 1000px)": {
-            display: "block"
-          },
+    
         position: 'sticky',
         top: '0',
         zIndex:100,
@@ -162,7 +158,24 @@ const useStyles = makeStyles((theme) => ({
     },
     op:{
         padding:'6rem 0rem'
-    }
+    },
+    mobileView:{
+        "@media (min-width: 50px)": {
+            display: "block"
+          },
+          "@media (min-width: 1000px)": {
+            display: "none"
+          },
+    },
+    dekstopView:{
+        "@media (min-width: 50px)": {
+            display: "none"
+          },
+          "@media (min-width: 1000px)": {
+            display: "block"
+          },
+      
+    },
     
 }));
 
@@ -200,7 +213,8 @@ export const Header= (props) => {
         active[7]=true;
     }
     return(
-        <div className={classes.parentHeader}>
+        <>
+        <div className={classes.parentHeader + " " + classes.dekstopView}>
             <div className={classes.topheader} >
                 <Container>
                     <Grid container>
@@ -236,6 +250,11 @@ export const Header= (props) => {
             </div>
           
     </div>
+        <div className={classes.mobileView}>
+            <MobileHeader/>
+            
+        </div>
+    </>
     
     )
 }

@@ -74,12 +74,6 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     parentHeader:{
-        "@media (min-width: 50px)": {
-            display: "none"
-          },
-          "@media (min-width: 1000px)": {
-            display: "block"
-          },
         '& .MuiTypography-h4':{
             fontWeight:600,
             fontFamily: 'Lato, sans-serif',
@@ -94,13 +88,24 @@ const useStyles = makeStyles((theme) => ({
             fontFamily: 'Lato, sans-serif',
         }
     },
-    mobileHeader:{
+    mobileView:{
         "@media (min-width: 50px)": {
             display: "block"
           },
           "@media (min-width: 1000px)": {
             display: "none"
           },
+    },
+    dekstopView:{
+        "@media (min-width: 50px)": {
+            display: "none"
+          },
+          "@media (min-width: 1000px)": {
+            display: "block"
+          },
+      
+    },
+    mobileHeader:{
         '& .MuiTypography-h4':{
             fontWeight:600,
             fontFamily: 'Lato, sans-serif',
@@ -245,7 +250,7 @@ export const HomePage= (props) => {
     return(
         <>
         <Header history={props.history}  />
-        <div className={classes.parentHeader}>
+        <div className={classes.parentHeader + " " + classes.dekstopView}>
             <div >
             <Carousel  className={classes.courousal} animation="slide" indicators={false} interval={4000}  navButtonsAlwaysVisible={true} autoPlay={true}>
                 
@@ -550,7 +555,7 @@ duration={1.5}/>}</Typography>
 
     {/* MOBILE WORK */}
 
-    <div className={classes.mobileHeader}>
+    <div className={classes.mobileHeader + " " + classes.mobileView}>
             <div >
             <Carousel  className={classes.courousal} animation="slide" indicators={false} interval={4000}  navButtonsAlwaysVisible={true} autoPlay={true}>
                 
