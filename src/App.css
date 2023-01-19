@@ -1,0 +1,18 @@
+a:-webkit-any-link {
+  color: black;
+  text-decoration: none;
+}
+
+.footer_app a:-webkit-any-link {
+  color: white;
+  text-decoration: none;
+}
+
+.MuiButtonBase-root:hover{
+  background-color: #374D9A !important;
+  color:white !important
+}
+
+.sfa_home .MuiButtonBase-root:hover{
+  background-color:black !important;
+}
