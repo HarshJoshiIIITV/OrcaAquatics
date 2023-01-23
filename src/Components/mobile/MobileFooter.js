@@ -9,17 +9,17 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import YouTubeIcon from '@material-ui/icons/YouTube';
-import footerImg from '../images/footer.jpg'
-import partner from '../images/partner.png'
-import partner1 from '../images/partner1.png'
-import partner2 from '../images/partner2.png'
-import partner3 from '../images/partner3.jpg'
-import partner4 from '../images/partner4.png'
-import partner5 from '../images/partner5.jpg'
-import partner6 from '../images/partner6.png'
+import footerImg from '../../images/footer.jpg'
+import partner from '../../images/partner.png'
+import partner1 from '../../images/partner1.png'
+import partner2 from '../../images/partner2.png'
+import partner3 from '../../images/partner3.jpg'
+import partner4 from '../../images/partner4.png'
+import partner5 from '../../images/partner5.jpg'
+import partner6 from '../../images/partner6.png'
 import Carousel from 'react-material-ui-carousel'
 import {Link} from 'react-router-dom';
-import MobileFooter from './mobile/MobileFooter'
+
 const useStyles = makeStyles((theme) => ({
     footer:{
         background: `linear-gradient( rgba(17,17,17,0.8), rgba(17,17,17,0.8) ), url(${footerImg})`,
@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundSize: 'cover',
         overflow: 'hidden',
         marginTop:'2rem',
-        padding:'3rem 0rem',
+        padding:'1rem 0rem',
         '& p':{
             fontFamily: 'Lato, sans-serif ',
             color:'#555555',
@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     op:{
-        padding:'5rem 0rem 3rem 0rem',
+        padding:'2rem 0rem 2rem 0rem',
         '& .MuiTypography-h4':{
             fontWeight:600,
             fontFamily: 'Lato, sans-serif ',
@@ -74,25 +74,7 @@ const useStyles = makeStyles((theme) => ({
             color:'white',
             fontSize:'16px'
         }
-    },
-    mobileView:{
-        "@media (min-width: 50px)": {
-            display: "block"
-          },
-          "@media (min-width: 1000px)": {
-            display: "none"
-          },
-    },
-    dekstopView:{
-        "@media (min-width: 50px)": {
-            display: "none"
-          },
-          "@media (min-width: 1000px)": {
-            display: "block"
-          },
-      
-    },
-    
+    }
     
     
     
@@ -102,18 +84,19 @@ const useStyles = makeStyles((theme) => ({
 export const Footer= (props) => {
     const classes = useStyles();
     return(
-        <div className='footer_app'>
-            <div className={classes.dekstopView}>
-         <div className={classes.sfa} style={{backgroundColor:'#374D9A',padding:'50px 0px'}}>
+     
+            <>
+         <div className={classes.sfa} style={{backgroundColor:'#374D9A',padding:'22px 0px'}}>
                 <Container className='sfa_home'>
                     <Grid container>
-                        <Grid item md={9}>
-                            <Typography variant='h4'>REGISTER NOW!</Typography>
-                            <br/>
-                            <Typography variant='h6'>Become water safe and kick start your journey with OrcaAquatics today!</Typography>
+                        <Grid item md={12}>
+                            <Typography variant='h6'>REGISTER NOW!</Typography>
+                            
+                            <Typography variant='body2'>Become water safe and kick start your journey with OrcaAquatics today!</Typography>
                         </Grid>
-                        <Grid item md={3}>
-                           <Link to="contact_us"> <Button  style={{backgroundColor:'black',color:'white', padding:'25px 10px',borderRadius:'10px'}} fullWidth>START FREE ASSESSMENT</Button></Link>
+                       
+                        <Grid item md={12}>
+                           <Link to="contact_us"> <Button  style={{marginTop:'12px',backgroundColor:'black',color:'white', padding:'10px 18px',borderRadius:'10px'}} fullWidth>START FREE ASSESSMENT</Button></Link>
                         </Grid>
                     </Grid>
                 </Container>
@@ -124,31 +107,27 @@ export const Footer= (props) => {
             <Container>
                 <Carousel>
                     <Grid container>
-                        <Grid item md={3}>
-                            <img src={partner} width='70%' height='80px'/>
+                        <Grid item md={4}>
+                            <img src={partner4}  height='80px'/>
                         </Grid>
-                        <Grid item md={3}>
-                        <img src={partner1} width='70%' height='80px'/>
+                        <Grid item md={4}>
+                        <img src={partner6}  height='80px'/>
                         </Grid>
-                        <Grid item md={3}>
-                        <img src={partner2} width='70%' height='80px'/>
-                         </Grid>
-                        <Grid item md={3}>
-                        <img src={partner3} width='70%' height='80px'/>
+                        
+                        <Grid item md={4}>
+                        <img src={partner5}  height='80px'/>
                         </Grid>
                     </Grid>
                     <Grid container>
-                        <Grid item md={3}>
-                            <img src={partner4} width='70%' height='80px'/>
+                        
+                        <Grid item md={4}>
+                        <img src={partner1}  height='80px'/>
                         </Grid>
-                        <Grid item md={3}>
-                        <img src={partner5} width='70%' height='80px'/>
-                        </Grid>
-                        <Grid item md={3}>
-                        <img src={partner6} width='70%' height='80px'/>
-                        </Grid>
-                        <Grid item md={3}>
-                        <img src={partner3} width='70%' height='80px'/>
+                        <Grid item md={4}>
+                        <img src={partner2}  height='80px'/>
+                         </Grid>
+                         <Grid item md={4}>
+                            <img src={partner3}  height='80px'/>
                         </Grid>
                     </Grid>
                 </Carousel>
@@ -162,7 +141,7 @@ export const Footer= (props) => {
                         <Typography variant='h6'>
                         ABOUT ORCA AQUATICS
                         </Typography>
-                        <br/>
+                     
                         <Typography variant='body2'>
                         Orca Aquatics is home of a comprehensive aquatics programme in swimming, competitive swimming, learn to swim and water polo. With over 4+ locations in the Jaipur, and USA qualified teachers and coaches to choose from, access to quality aquatics provision has never been easier.
                         </Typography>
@@ -171,7 +150,7 @@ export const Footer= (props) => {
                     <Typography variant='h6'>
                         CARRERS
                         </Typography>
-                        <br/>
+               
                         <Typography variant='body2'>
                         At Orca Aquatics, we recruit and retain a high performing and diverse workforce and foster a healthy, safe and productive work environment. The mission of the HR Department is to develop and sustain a dynamic work environment while providing support and growth opportunities.
 Click Here to view opportunities at Orca Aquatics.
@@ -181,7 +160,7 @@ Click Here to view opportunities at Orca Aquatics.
                     <Typography variant='h6'>
                     OFFICE HOURS
                         </Typography>
-                        <br/>
+                       
                         <Typography variant='body2'>
                         At Orca Aquatics, we recruit and retain a high performing and diverse workforce and foster a healthy, safe and productive work environment. The mission of the HR Department is to develop and sustain a dynamic work environment while providing support and growth opportunities.
 Click Here to view opportunities at Orca Aquatics.
@@ -192,7 +171,7 @@ Click Here to view opportunities at Orca Aquatics.
                     <Typography variant='h6'>
                     CONTACT US
                         </Typography>
-                        <br/>
+                        
                         <Typography variant='body2'>
                             <TelegramIcon style={{ color: "white",position:'relative',top:'5px',marginRight:'10px' }}/>
                         A-235, Kardhni Scheme, Govindpura, Jaipur, Rajasthan, 302012
@@ -225,19 +204,13 @@ Click Here to view opportunities at Orca Aquatics.
             
 
     </div>
-    <div style={{background:'black',padding:'2.5rem'}}>
+    <div style={{background:'black',padding:'1.5rem'}}>
     <Container  >
                 <Typography align='center' style={{color:'white'}} variant="body2">Copyright © 2022. All Right Reserved - by Orca Aquatics | Privacy Policy</Typography>
                 <Typography align='center' style={{marginTop:'10px',color:'white'}} variant="body2">Powered by HJ SOLUTIONS</Typography>
             </Container>
     </div>
-    </div>
-    <div className={classes.mobileView}>
-            <MobileFooter/>
-            
-        </div>
-
-    </div>
+    </>
     
     )
 }

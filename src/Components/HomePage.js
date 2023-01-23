@@ -9,6 +9,10 @@ import home1 from '../images/home1.jpg'
 import home2 from '../images/home2.jpg'
 import home3 from '../images/home3.jpg'
 import home4 from '../images/home4.jpg'
+import home_mob1 from '../images/home_mobile2.jpg'
+import home_mob2 from '../images/home_mobile3.jpg'
+import home_mob3 from '../images/home_mobile.jpg'
+import home_mob4 from '../images/home_mobile.jpg'
 import Carousel from 'react-material-ui-carousel'
 import coropic from '../images/coropic.jpg'
 import coropic1 from '../images/coropic1.png'
@@ -57,6 +61,14 @@ const useStyles = makeStyles((theme) => ({
         background:'#374D9A',
         color:'white',
         borderRadius:'10px',
+        fontFamily:'Lato, sans-serif',
+        fontWeight:600
+    },
+    orange_buttons_mob:{
+        padding:'10px 18px',
+        background:'#374D9A',
+        color:'white',
+        borderRadius:'8px',
         fontFamily:'Lato, sans-serif',
         fontWeight:600
     },
@@ -115,6 +127,9 @@ const useStyles = makeStyles((theme) => ({
             fontWeight:600,
             fontFamily: 'Lato, sans-serif ',
             color:'white'
+        },
+        '& .MuiTypography-body2':{
+            fontFamily: 'Lato, sans-serif ',
         },
         '& Button':{
             fontFamily: 'Lato, sans-serif',
@@ -302,7 +317,7 @@ export const HomePage= (props) => {
                             <Typography variant='h6'>Become water safe and kick start your journey with OrcaAquatics today!</Typography>
                         </Grid>
                         <Grid item md={3}>
-                            <Button style={{backgroundColor:'black',color:'white', padding:'25px 10px',borderRadius:'10px'}} fullWidth>START FREE ASSESSMENT</Button>
+                        <Link to="contact_us"><Button style={{backgroundColor:'black',color:'white', padding:'25px 10px',borderRadius:'10px'}} fullWidth>START FREE ASSESSMENT</Button></Link>
                         </Grid>
                     </Grid>
                 </Container>
@@ -437,9 +452,9 @@ export const HomePage= (props) => {
                 <Grid container>
                     <Grid item md={4}/>
                     <Grid item md={4} >
-                    <Button className={classes.orange_buttons}>
+              <Link to="contact_us">      <Button className={classes.orange_buttons}>
                     START ASSESSMENT
-                </Button>
+                </Button></Link>
                     </Grid>
                 <Grid item md={4}/>
                 </Grid>
@@ -561,81 +576,61 @@ duration={1.5}/>}</Typography>
                 
                         <Paper style={{ height: '350px' }} > 
                             <div style={{position:'relative'}}>
-                                <img src={home1} />
-                                <div style={{position:'absolute', top:'5%', left:'8%'}}>
+                                <img src={home_mob1} />
+                                <div style={{position:'absolute', top:'15%', left:'18%'}}>
                                 <Typography variant='h4'>IT'S NEVER TOO EARLY TO <br/>LEARN TO SWIM!</Typography>
-                                <br/>
-                                <br/>
-                                <Button className={classes.orange_buttons}>LEARN MORE</Button>
+                                <Button className={classes.orange_buttons_mob}>LEARN MORE</Button>
                                 </div>
                             </div>
                         </Paper>
                         <Paper style={{ height: '350px' }}   >
                         <div style={{position:'relative'}}>
-                                <img src={home2} />
-                                <div style={{position:'absolute', top:'5%', left:'8%'}}>
+                                <img src={home_mob2} />
+                                <div style={{position:'absolute', top:'15%', left:'18%'}}>
                                 <Typography variant='h4'>IT'S NEVER TOO EARLY TO <br/>LEARN TO SWIM!</Typography>
-                                <br/>
-                                <br/>
-                                <Button className={classes.orange_buttons}>LEARN MORE</Button>
+                                <Button className={classes.orange_buttons_mob}>LEARN MORE</Button>
                                 </div>
                             </div>
                          </Paper>
                         <Paper  style={{ height: '350px' }} >
                         <div style={{position:'relative'}}>
-                                <img src={home3} />
-                                <div style={{position:'absolute', top:'5%', left:'8%'}}>
+                                <img src={home_mob3} />
+                                <div style={{position:'absolute', top:'15%', left:'18%'}}>
                                 <Typography variant='h4'>IT'S NEVER TOO EARLY TO <br/>LEARN TO SWIM!</Typography>
-                                <br/>
-                                <br/>
-                                <Button className={classes.orange_buttons}>LEARN MORE</Button>
+                                <Button className={classes.orange_buttons_mob}>LEARN MORE</Button>
                                 </div>
                             </div>
                         </Paper>
-                        <Paper style={{ height: '350px' }} >
-                        <div style={{position:'relative'}}>
-                                <img src={home4} />
-                                <div style={{position:'absolute', top:'5%', left:'8%'}}>
-                                <Typography variant='h4'>IT'S NEVER TOO EARLY TO <br/>LEARN TO SWIM!</Typography>
-                                <br/>
-                                <br/>
-                                <Button className={classes.orange_buttons}>LEARN MORE</Button>
-                                </div>
-                            </div>
-                        </Paper>
-                        
-                
             </Carousel>
-            <div style={{backgroundColor:'#374D9A',padding:'50px 0px'}}>
+            <div style={{backgroundColor:'#374D9A',padding:'22px 0px'}}>
                 <Container>
                     <Grid container>
                         <Grid item md={9}>
-                            <Typography variant='h4'>REGISTER NOW!</Typography>
-                            <br/>
-                            <Typography variant='h6'>Become water safe and kick start your journey with OrcaAquatics today!</Typography>
+                            <Typography variant='h6'>REGISTER NOW!</Typography>
+                            
+                            <Typography style={{color:'white'}} variant='body2'>Become water safe and kick start your journey with OrcaAquatics today!</Typography>
                         </Grid>
                         
                         <Grid item md={3}>
-                            <Button style={{marginTop:'18px', backgroundColor:'black',color:'white', padding:'25px 10px',borderRadius:'10px'}} fullWidth>START FREE ASSESSMENT</Button>
+                        <Link to="contact_us">  <Button style={{marginTop:'12px', backgroundColor:'black',color:'white', padding:'10px 18px',borderRadius:'10px'}} fullWidth>START FREE ASSESSMENT</Button></Link>
                         </Grid>
                     </Grid>
                 </Container>
             </div>
             </div>
-            <div style={{height:'5px'}} ></div>
+       
             <div className={classes.aboutOA}    >
                 
                 <Container>
                     <Grid container>
                         <Grid item md={7}>
-                            <br/>
-                            <Typography  variant='h4'>ABOUT ORCA AQUATICS</Typography>
-                            <br/>
+                            <Typography style={{fontWeight:600}} variant='h4'>ABOUT ORCA AQUATICS</Typography>
+                     
                             <Typography variant='body2'>
                             Orca Aquatics is home of a comprehensive aquatics programme in swimming, competitive swimming, learn to swim and water polo. With over 4+ locations in the Jaipur,
                                and USA qualified teachers and coaches to choose from, access to quality aquatics provision has never been easier.
                             </Typography>
-                            <br/>
+                            
                             <Grid container>
                                 <Grid item md={6}>
                                 <Typography variant='h6' style={{fontWeight:600}}>OVER 5+ LOCATIONS</Typography>
@@ -648,7 +643,7 @@ duration={1.5}/>}</Typography>
                                     
                                 </Grid>
                             </Grid>
-                            <br/>
+                
                             <Grid container>
                                 <Grid item md={6}>
                                 <Typography variant='h6' style={{fontWeight:600}}>USA QUALIFIED TEACHERS</Typography>
@@ -666,9 +661,9 @@ duration={1.5}/>}</Typography>
                         <br/>
                         <br/>
                         <Grid item md={5} >
-                            <div className={classes.formHome} style={{background: '#FFFFFF',padding: '30px 20px',border: '1px solid #f2f2f2',boxShadow: '0px 0px 25px 10px rgb(0 0 0 / 5%)'}}>
+                            <div className={classes.formHome} style={{background: '#FFFFFF',padding: '20px 10px',border: '1px solid #f2f2f2',boxShadow: '0px 0px 25px 10px rgb(0 0 0 / 5%)'}}>
                             <Typography 
-                            variant='h6' style={{fontWeight:600,textAlign:'center'}}>HAVE A QUESTION? <br/> REQUEST A CALLBACK FROM OUR<br/> SUPPORT STAFF</Typography>
+                            variant='h6' style={{fontWeight:600,textAlign:'center'}}>HAVE A QUESTION? <br/> REQUEST A CALLBACK <br/>FROM OUR SUPPORT STAFF</Typography>
                             <br/>
                             <TextField 
                              fullWidth id="name" label="Name" variant="outlined" style={{marginBottom:'16px'}}/>
@@ -683,7 +678,7 @@ duration={1.5}/>}</Typography>
                                rows={3}
                             />
                             
-                            <Button fullWidth>SEND MESSAGE</Button>
+                            <Button fullWidth style={{color:'white'}}>SEND MESSAGE</Button>
                             </div>
 
 
@@ -696,7 +691,7 @@ duration={1.5}/>}</Typography>
                 <Container>
                     <Typography align="center" variant='h4'>OUR PROGRAMMERS
                     </Typography>
-                    <br/>
+                
                     <Typography variant='body2'>
                     We offer fun and competitive opportunities for you to lead a healthier and safer lifestyle. Whether you are starting your journey to learn how to swim or have Olympic aspirations in any aquatic sport, we have the programme for you. We invite you to join us and experience the difference we can make in your life through the water.
                     </Typography>
@@ -704,24 +699,24 @@ duration={1.5}/>}</Typography>
                     <Carousel  className={classes.courousal} animation="slide" indicators={false} interval={4000}  navButtonsAlwaysVisible={true} autoPlay={true}>
                         <div>
                             <Grid container>
-                                <Grid item sm={12} xs={12} md={12} style={{padding:'20px'}}>
-                                    <img src={coropic} width="350px" height="300px" />
+                                <Grid item sm={12} xs={12} md={12} >
+                                    <img src={coropic3} width="100%" height="300px" />
                                 </Grid>
                             </Grid>
 
                         </div>
                         <div>
                             <Grid container>
-                                <Grid item sm={12} xs={12} md={12} style={{padding:'20px'}}>
-                                    <img src={coropic} width="350px" height="300px"  />
+                                <Grid item sm={12} xs={12} md={12} >
+                                    <img src={coropic4} width="100%" height="300px"  />
                                 </Grid>
                             </Grid>
 
                         </div>
                         <div>
                             <Grid container>
-                                <Grid item sm={12} xs={12} md={12} style={{padding:'20px'}} >
-                                    <img src={coropic} width="350px" height="300px"  />
+                                <Grid item sm={12} xs={12} md={12}  >
+                                    <img src={coropic5} width="100%" height="300px"  />
                                 </Grid>
                             </Grid>
 
@@ -729,15 +724,15 @@ duration={1.5}/>}</Typography>
 
 
                     </Carousel>
-                <br/>
+                            <br/>
                 <Grid container>
-                    <Grid item xs={2} sm={2} md={2} />
-                    <Grid item xs={8} sm={8} md={8}>
-                    <Button className={classes.orange_buttons}>
+                    <Grid item xs={3}  />
+                    <Grid item xs={6}>
+                    <Link to="contact_us"> <Button className={classes.orange_buttons_mob}>
                     START ASSESSMENT
-                </Button>
+                </Button></Link>
                     </Grid>
-                    <Grid item xs={2} sm={2} md={2} />
+                    <Grid item xs={3} />
                 </Grid>
                 <br/>
 
@@ -753,7 +748,7 @@ duration={1.5}/>}</Typography>
 
   end={12}
   duration={1.5}/>} + </Typography>
-                            <Typography variant='h6'>YEARS EXPERIANCE <br/> IN THE RAJASTHAN</Typography>
+                            <Typography variant='h6'>YEARS EXPERIANCE IN THE RAJASTHAN</Typography>
                         </Grid>
                         
                         <Grid style={{marginTop:'15px'}} item md={12} sm={12} xs={12}>
@@ -761,21 +756,21 @@ duration={1.5}/>}</Typography>
 
 end={100}
 duration={1.5}/>} + </Typography>
-                            <Typography variant='h6'>ACTIVE SWIMMING <br/> COMMUNITY</Typography>
+                            <Typography variant='h6'>ACTIVE SWIMMING COMMUNITY</Typography>
                         </Grid>
                         <Grid style={{marginTop:'15px'}} item md={12} sm={12} xs={12}>
                         <Typography variant='h4'>{counting && <CountUp
 
 end={250}
 duration={1.5}/>}</Typography>
-                            <Typography variant='h6'>NATIONAL SWIMMERS <br/> CREATED</Typography>
+                            <Typography variant='h6'>NATIONAL SWIMMERS CREATED</Typography>
                         </Grid>
                         <Grid style={{marginTop:'15px'}} item md={12} sm={12} xs={12}>
                         <Typography variant='h4'>{counting && <CountUp
 
 end={8}
 duration={1.5}/>}</Typography>
-                            <Typography variant='h6'>NATIONAL MEDALLIST <br/> SWIMMERS CREATED</Typography>
+                            <Typography variant='h6'>NATIONAL MEDALLIST SWIMMERS CREATED</Typography>
                         </Grid>
 
                     </Grid>
@@ -788,11 +783,11 @@ duration={1.5}/>}</Typography>
                 <Container>
                     <Typography variant='h4' align="center" style={{color:'black'}}> SWIMMERS TESTIMONIALS</Typography>
                     <br/>
-                    <Grid container>
-                        <Grid item xs={12} md={12} sm={12}>
-                            <img src={testimonials} style={{maxWidth:'100%', display:'block'}}/>
+                    <Grid >
+                       
+                            <img src={testimonials} style={{width:'100%',height:'250px', display:'block'}}/>
 
-                        </Grid>
+                       
                         <Grid item xs={12} md={12} sm={12}>
                         
                             <Carousel  autoPlay={false} navButtonsAlwaysInvisible={true}  >
@@ -811,36 +806,13 @@ duration={1.5}/>}</Typography>
             </div>
             <br/>
             <br/>
-            <div className={classes.videos}>
+            <div className={classes.videos} style={{padding:'3rem 0rem'}}>
                 <a target="_blank"  href="https://www.youtube.com/watch?v=66erBKhLnA4">
                 <PlayCircleOutlineIcon  style={{display:'block',margin:'2px auto',fontSize:'7rem',color:'white'}}/>
                 </a>
             </div> 
-            <br/>
-            <br/>
-            <div className={classes.op} style={{padding:'1rem 0'}}>
-            <Typography variant='h4' align="center" style={{color:'black'}}> OUR PARTNERS</Typography>
-            <Container>
-                <Carousel>
-                    <Grid container>
-                        <Grid item sm={12} md={12} xs={12}>
-                            <img src={partner} width='100%' height='200px'/>
-                        </Grid>
-                       
-                    </Grid>
-                    <Grid container>
-                        <Grid item sm={12} md={12} xs={12}>
-                            <img src={partner} width='100%' height='200px'/>
-                        </Grid>
-                       
-                    </Grid>
-                </Carousel>
-                
-            </Container>
-            </div>
-            <br/>
-            <br/>
-            <br/>
+           
+           
 
     </div>
    

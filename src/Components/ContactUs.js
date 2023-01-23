@@ -69,6 +69,9 @@ const useStyles = makeStyles((theme) => ({
     },
     contactUsForm:{
         "@media (min-width: 100px)": {
+            maxWidth: "100%"
+          },
+          "@media (min-width: 700px)": {
             maxWidth: "80%"
           },
           "@media (min-width: 1300px)": {
